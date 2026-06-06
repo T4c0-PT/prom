@@ -33,7 +33,7 @@ public class GetRankingView : MonoBehaviour
             }
         }
 
-        Debug.Log("Total Score Updated");
+        Debug.Log("ranking");
 
     }
 }
