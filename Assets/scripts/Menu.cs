@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] Button button;
+    GameObject but;
+
+    private void Awake()
     {
-        
+        Time.timeScale =0f;
+        button.onClick.AddListener(Play);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Play()
     {
+        Time.timeScale = 1f;
         
     }
 }
