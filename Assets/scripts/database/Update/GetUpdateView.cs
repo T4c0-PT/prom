@@ -10,7 +10,7 @@ public class GetUpdateView : MonoBehaviour
 
     [SerializeField] private GetUpdateController controller;
 
-    private int score = 0; //referencia
+    private int score = 35; //referencia
 
     void Awake()
     {
@@ -27,6 +27,6 @@ public class GetUpdateView : MonoBehaviour
     void OnResult()
     {
         Debug.Log("exito");
-
+        //GetComponent<GetRankingView>().Send();
     }
 }

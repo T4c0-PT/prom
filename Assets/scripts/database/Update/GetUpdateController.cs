@@ -5,17 +5,17 @@ using System.Collections;
 
 public class GetUpdateController : MonoBehaviour
 {
-    private string URL = "http://localhost/porom/Update.php";
+    private string URL = "http://localhost/Promerdio2/php/Update.php";
 
-    public void Send(string username, int score, Action callback)
+    public void Send(string name, int score, Action callback)
     {
-        StartCoroutine(SendRequest(username, score, callback));
+        StartCoroutine(SendRequest(name, score, callback));
     }
 
-    private IEnumerator SendRequest(string username, int score, Action callback)
+    private IEnumerator SendRequest(string name, int score, Action callback)
     {
         WWWForm form = new WWWForm();
-        form.AddField("username", username);
+        form.AddField("name", name);
         form.AddField("score", score);
 
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
